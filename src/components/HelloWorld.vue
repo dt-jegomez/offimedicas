@@ -1,17 +1,13 @@
 <template>
   <!-- <div class="container"> -->
-    <div class="row " style="height: 599px;"> 
+    <div class="row" id="morado" style=""> 
       <div class="col-8">
           <div class=" row  justify-content-center">
-            <img  height="20" width="20" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.pngtree.com%2Ffreepng%2Fstar-cartoon-cartoon-stars-icon_3816664.html&psig=AOvVaw3Tqiig_S1_bCMjlhptnWjG&ust=1583551973037000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMCo8_z0hOgCFQAAAAAdAAAAABAF" alt="">
+            <img   src="https://pngimage.net/wp-content/uploads/2018/05/estrellas-ue-png-6-300x200.png" alt="">
           </div>
           <div class=" row mt-2 justify-content-center">
-            <p>
-              Enter your numbre to ear
-            </p>
-            <p>
-              rewards
-            </p>
+            <p  class="w-100 text-center" style="font-size: 30px;"> Enter your numbre to ear </p>
+            <p class="w-100 text-center"> rewards </p>
           </div>
           <div class="row my-4 justify-content-center ">
             <p style="font-size: 10px;">es simplemente el texto de relleno de las imprentas </p>
@@ -20,60 +16,60 @@
               <el-button type="danger" plain  @click="openModal">View Details</el-button>
           </div>
       </div>
-      <div class="col-4 text-white" style="background-color:#390a65;">
-          <div class="row justify-content-center mb-4">
-              <p class="px-2 mx-2">Digite su numero</p>
+      <div class="col-4 text-white" style="background-color:#390a65; border-bottom-left-radius: 10px; border-top-left-radius: 10px;">
+          <div class="row justify-content-center my-4">
+              <p class="px-2 mx-2" style="color:#a66bdd;">Digite su numero</p>
           </div>
-          <div class="row mb-4">
-            <el-input placeholder="Please input" v-model="input"/>
+          <div class="row mb-4 px-3">
+            <el-input placeholder="Please input" v-model="input" style="color:#a66bdd;"/>
           </div>
-          <div class="row mb-1">
-            <div class="col-4 px-0">
-              <el-button class="w-100" @click="numero(1)">1</el-button>
+          <div class="row mb-1 px-2">
+            <div class="col-4 px-1 mb-1" >
+              <el-button class="w-100" @click="numero(1)" style="font-size: 30px;">1</el-button>
             </div>
-            <div class="col-4 px-0">
-              <el-button class="w-100" @click="numero(2)">2</el-button>
+            <div class="col-4 px-1 mb-1" > 
+              <el-button class="w-100" @click="numero(2)" style="font-size: 30px;">2</el-button>
             </div>
-            <div class="col-4 px-0">
-              <el-button class="w-100" @click="numero(3)">3</el-button>
-            </div>
-          </div>
-          <div class="row mb-1">
-            <div class="col-4 px-0">
-              <el-button class="w-100" @click="numero(4)">4</el-button>
-            </div>
-            <div class="col-4 px-0">
-              <el-button class="w-100" @click="numero(5)">5</el-button>
-            </div>
-            <div class="col-4 px-0">
-              <el-button class="w-100" @click="numero(6)">6</el-button>
+            <div class="col-4 px-1 mb-1" > 
+              <el-button class="w-100" @click="numero(3)" style="font-size: 30px;">3</el-button>
             </div>
           </div>
-          <div class="row mb-1">
-            <div class="col-4 px-0">
-              <el-button class="w-100" @click="numero(7)">7</el-button>
+          <div class="row mb-1 px-2">
+            <div class="col-4 px-1 mb-1">
+              <el-button class="w-100" @click="numero(4)" style="font-size: 30px;">4</el-button>
             </div>
-            <div class="col-4 px-0">
-              <el-button class="w-100" @click="numero(8)">8</el-button>
+            <div class="col-4 px-1 mb-1">
+              <el-button class="w-100" @click="numero(5)" style="font-size: 30px;">5</el-button>
             </div>
-            <div class="col-4 px-0">
-              <el-button class="w-100" @click="numero(9)">9</el-button>
+            <div class="col-4 px-1 mb-1">
+              <el-button class="w-100" @click="numero(6)" style="font-size: 30px;">6</el-button>
             </div>
           </div>
-          <div class="row mb-1">
-            <div class="col-4 px-0">
-              <el-button class="w-100" @click="limpiar">x</el-button>
+          <div class="row mb-1 px-2">
+            <div class="col-4 px-1 mb-1">
+              <el-button class="w-100" @click="numero(7)" style="font-size: 30px;">7</el-button>
             </div>
-            <div class="col-4 px-0">
-              <el-button class="w-100" @click="numero(0)">0</el-button>
+            <div class="col-4 px-1 mb-1">
+              <el-button class="w-100" @click="numero(8)" style="font-size: 30px;">8</el-button>
             </div>
-            <div class="col-4 px-0">
-              <el-button class="w-100" @click="borrar">
-                h
+            <div class="col-4 px-1 mb-1">
+              <el-button class="w-100" @click="numero(9)" style="font-size: 30px;">9</el-button>
+            </div>
+          </div>
+          <div class="row mb-1 px-2">
+            <div class="col-4 px-1 mb-1">
+              <el-button class="w-100" @click="limpiar" style="font-size: 30px;">x</el-button>
+            </div>
+            <div class="col-4 px-1 mb-1">
+              <el-button class="w-100" @click="numero(0)" style="font-size: 30px;">0</el-button>
+            </div>
+            <div class="col-4 px-1 mb-1">
+              <el-button class="w-100" @click="borrar" style="font-size: 30px;">
+                {{tecla}}
               </el-button>
             </div>
           </div>
-          <div class="row my-4">
+          <div class="row my-4 px-2">
             <el-button class="w-100" @click="checkIn">
               check in
             </el-button>
@@ -112,7 +108,8 @@ export default {
       input: '',
       centerDialogVisible: false,
       email:'',
-      name:''
+      name:'',
+      tecla: "<"
     }
   },
   methods:{
@@ -147,19 +144,15 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+<style  scoped>
+#morado{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+
 }
 </style>
