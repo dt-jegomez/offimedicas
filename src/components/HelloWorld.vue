@@ -21,7 +21,7 @@
               <p class="px-2 mx-2" style="color:#a66bdd;">Digite su numero</p>
           </div>
           <div class="row mb-4 px-3">
-            <el-input placeholder="Please input" v-model="input" style="color:#a66bdd;"/>
+            <input placeholder="Please input" v-model="input" class="form-control" style="color:#a66bdd; background-color: #a571e4;"/>
           </div>
           <div class="row mb-1 px-2">
             <div class="col-4 px-1 mb-1" >
