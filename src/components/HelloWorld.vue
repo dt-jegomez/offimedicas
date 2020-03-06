@@ -1,22 +1,22 @@
 <template>
   <!-- <div class="container"> -->
-    <div class="row" id="morado" style=""> 
+    <div class="row mx-0 " id="morado" style=""> 
       <div class="col-8">
           <div class=" row  justify-content-center">
             <img   src="https://pngimage.net/wp-content/uploads/2018/05/estrellas-ue-png-6-300x200.png" alt="">
           </div>
           <div class=" row mt-2 justify-content-center">
-            <p  class="w-100 text-center" style="font-size: 30px;"> Enter your numbre to ear </p>
+            <p  class="w-100 text-center" style="font-size: 30px;"> Enter your number to ear </p>
             <p class="w-100 text-center"> rewards </p>
           </div>
           <div class="row my-4 justify-content-center ">
             <p style="font-size: 10px;">es simplemente el texto de relleno de las imprentas </p>
           </div>
-          <div class="row justify-content-center">
-              <el-button type="danger" plain  @click="openModal">View Details</el-button>
+          <div class="row btn-hover-purple justify-content-center">
+              <el-button plain  @click="openModal">View Details</el-button>
           </div>
       </div>
-      <div class="col-4 text-white" style="background-color:#390a65; border-bottom-left-radius: 10px; border-top-left-radius: 10px;">
+      <div class="col-4 btn-purple text-white" style="background-color:#390a65; border-bottom-left-radius: 10px; border-top-left-radius: 10px;">
           <div class="row justify-content-center my-4">
               <p class="px-2 mx-2" style="color:#a66bdd;">Digite su numero</p>
           </div>
@@ -144,7 +144,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style  scoped>
+<style lang="scss">
 #morado{
     position: absolute;
     height: 100%;
@@ -154,5 +154,24 @@ export default {
     right: 0;
     overflow: hidden;
 
+}
+.btn-purple{
+  .el-button{
+    background: #a66bdd;
+  }
+}
+.btn-hover-purple{
+  .el-button{
+    background: white;
+    color:#8400ff;
+    border: 1px solid #a66bdd;
+  }
+  &:hover{
+    .el-button{
+      background: #a66bdd!important;
+      color:#8400ff!important;
+      border: 1px solid #a66bdd!important;
+    }
+  }
 }
 </style>
